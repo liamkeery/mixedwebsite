@@ -1,0 +1,586 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none;
+	color: white;
+}
+
+a:hover, a:active 
+{ 
+	text-decoration:none; 
+	color: #004B59;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*Div is block level and no width specidied therefore stretches full screen*/
+#topBar
+{
+	background-color: #004B59;
+	height: 20px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer 
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#mainHeader
+{
+	overflow: hidden; /*fixes colapsing parent*/
+	/*http://coding.smashingmagazine.com/2009/10/19/the-mystery-of-css-float-property/*/
+	background-image: url("../images/header_bckgrd_img.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 200px;
+	background-color: #f7f7f7;
+}
+
+#logo
+{
+	width: 200px;
+	float: left;
+	margin-top: 50px;
+	margin-left: 40px;
+}
+
+#mainNav 
+{
+	float: right;
+	width: 500px;
+	margin-top: 60px;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline;
+	font-size: 18px;
+	font-family: 'Nunito Sans', sans-serif; 
+	color: white;
+}
+
+.navDivide {
+	color: white;
+	font-size: 17px;
+	font-family: 'Nunito Sans', sans-serif;
+	padding-left: 6px;
+	padding-right:6px;
+}
+
+#promo {
+	overflow: hidden; /*fixes colapsing parent*/
+	padding-top: 40px;
+	padding-bottom: 30px;
+	background-color: #f7f7f7;
+}
+
+hr {
+	width: 880px;
+	padding:0;
+	margin:0 auto;
+	background-color: #d0d8d9;
+	height:2px;
+	border: none;
+}
+
+#promoText 
+{
+	float: left;
+	width: 600px;
+	padding-bottom:40px;
+}
+
+#promoImage 
+{
+	float: right;
+	width: 280px;
+}
+
+.promoHeading {
+	color: #004B59;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+.promoTagline {
+	color: #308e9f;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	font-style: italic;
+	padding-bottom: 6px;
+}
+
+.promoDesc {
+	color: #004B59;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	padding-bottom: 25px;
+}
+
+.promoButton {
+	background-color: #00B6D8;
+	border: none;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 6px;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+
+#productInfo 
+{
+	overflow: hidden; /*fixes colapsing parent*/
+	padding-bottom: 40px;
+	background-color: #f7f7f7;
+	padding-top: 10px;
+}
+
+.productDesc 
+{
+	float:left;
+	width: 200px;
+	margin-right: 20px;
+	margin-left: 10px;
+}
+
+.productDescLast 
+{
+	float: right;
+	width: 200px;
+	margin-right: 20px;
+}
+
+.productHeading {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: #004B59;
+	font-size: 14px;
+	margin: 0;
+	padding-bottom: 3px;
+	padding-top: 5px;
+	text-transform: uppercase;
+}
+
+.productTagline {
+	color: #308e9f;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 11px;
+	font-style: italic;
+	padding-bottom: 4px;
+	white-space: nowrap;
+}
+
+.serviceDesc {
+	font-family: 'Open Sans', sans-serif;
+	color: #004b59;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.testimonialHeading {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: #004B59;
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.quote {
+	color: #308e9f;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	font-style: italic;
+	padding-bottom: 10px;
+	text-align: center;
+	line-height: 15px;
+}
+
+.quoteName {
+	font-family: 'Open Sans', sans-serif;
+	color: #004b59;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.see {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 22px;
+	text-align: center;
+	color: #004b59;
+	padding-bottom: 5px;
+	line-height: 25px;
+}
+
+.arrow {
+	display: block;
+	margin: auto;
+}
+
+#mainFooter 
+{
+	overflow: hidden;
+	background: linear-gradient(#00B6D8, #004B59);
+	height: 180px;
+}
+
+#footerNav 
+{
+	float: left;
+	width: 500px;
+	margin-top: 80px;
+	clear: both;
+}
+
+#socialMediaCon {
+	width: 110px;
+	height: 25px;
+	float: left;
+	margin-top: 90px;
+}
+
+#iconNav {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#iconNav li {
+	float: left;
+}
+
+#iconNav a {
+	display: block;
+	width: 24px;
+	height: 24px;
+	padding-right: 3px;
+}
+
+#copyRight 
+{
+	float: right;
+	width: 310px;
+}
+
+.copyrightText {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	font-size: 12px;
+	float: right;
+	margin-top: 95px;
+	margin-right: 35px;
+}
+
+#twitter {
+	padding-right: 8px;
+	padding-top: 5px;
+}
+
+/*Page 2 - Notice we are using one style sheet for all of the pages*/
+
+#contentCon {
+	margin-top: 40px;
+	overflow: hidden; /*fixes colapsing parent*/
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+#content1 
+{
+	float: left;
+	width: 440px;
+}
+
+#content2 
+{
+	float: right;
+	width: 440px;
+}
+
+/*Page 3*/
+
+#productImages 
+{
+	margin-top: 40px;
+	overflow: hidden; /*fixes colapsing parent*/
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+.productImg 
+{
+	float:left;
+	width: 280px;
+	margin-right: 40px
+}
+
+.productImgLast
+{
+	float:left;
+	width: 280px;
+}
+
+#contentAreaBig
+{
+	margin-top: 40px;
+	overflow: hidden; /*fixes colapsing parent*/
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+
+#promoImageBig
+{
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+}
+
+.productDescLargeLeft 
+{
+	float:left;
+	width: 410px;
+}
+
+.productDescLargeRight 
+{
+	float:right;
+	width: 410px;
+}
+
+.packageDivide {
+	border: none;
+	height: 3px;
+	width: 280px;
+	background-color: #308e9f;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.packageHeading {
+	font-family: 'Open Sans', sans-serif;
+	color: #004B59;
+	font-weight: 700;
+	text-align: center;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.price {
+	font-family: "Open Sans", sans-serif;
+	color: #308E9F;
+	font-weight: 700;
+	font-size: 50px;
+	padding: 0;
+	margin-left: 70px;
+}
+
+.addButton {
+	background-color: #00B6D8;
+	border: none;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 6px;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	float: right;
+	margin-right: 83px;
+	margin-top: 15px;
+}
+
+.packageDesc {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #308E9F;
+	line-height: 22px;
+	margin-left: 75px;
+	padding-top: 5px;
+}
+
+.formLabel {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #308e9f;
+	margin-left: 65px;
+	display: inline-block;
+}
+
+.req {
+	color: red;
+}
+
+#submit {
+	background-color: #00B6D8;
+	border: none;
+	color: white;
+	padding: 6px;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	margin-left: 160px;
+	margin-top: 10px;
+}
+
+#firstName {
+	width: 150px;
+	background-color: #cfd7d8;
+	border: none;
+	padding: 5px;
+	box-shadow: inset 0 0 4px #767676;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-left: 11px;
+	display: inline;
+}
+
+#lastName {
+	width: 150px;
+	background-color: #cfd7d8;
+	border: none;
+	padding: 5px;
+	box-shadow: inset 0 0 4px #767676;
+	margin-bottom: 15px;
+	margin-left: 12px;
+}
+
+#email {
+	width: 150px;
+	background-color: #cfd7d8;
+	border: none;
+	padding: 5px;
+	box-shadow: inset 0 0 4px #767676;
+	margin-left: 45px;
+	margin-bottom: 15px;
+}
+
+#yourMessage {
+	background-color: #cfd7d8;
+	border: none;
+	padding: 5px;
+	box-shadow: inset 0 0 4px #767676;
+}
+
+#txtArea {
+	vertical-align: top;
+}
+
+#top {
+	vertical-align: top;
+}
+
+.contactDivide {
+	border: none;
+	height: 3px;
+	width: 280px;
+	background-color: #308e9f;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.contactHeading {
+	font-family: 'Open Sans', sans-serif;
+	color: #004B59;
+	font-weight: 700;
+	text-align: center;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+	margin: 0 auto;
+}
+
+#contactForm {
+	padding-top: 5px;
+}
+
+.labelMessage {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	color: #308e9f;
+	margin-left: 65px;
+	display: inline-block;
+}
+
+.hours {
+	color: #308e9f;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 130px;
+	line-height: 25px;
+}
+
