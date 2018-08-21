@@ -1,2 +1,2 @@
 # mixedwebsite
-# An original website concept designed & developed by myself.
+An original website concept designed & developed by myself.
